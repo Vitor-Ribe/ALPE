@@ -5,7 +5,7 @@ from PyQt6.QtCore import Qt
 import back
 
 def titleConfigStyle(title):
-    x = (janela.width() // 2) - (title.width() + (title.width() // 2))  # Centraliza o titulo na tela
+    x = (janela.width() // 2) - title.width()  # Centraliza o titulo na tela
     title.move(x, 130)
     title.setStyleSheet("""
         QLabel {
@@ -142,14 +142,14 @@ saida = None
 # configurações da janela
 janela = QWidget()
 janela.setFixedSize(800, 600)
-janela.setWindowTitle("Downloader do Youtube")
+janela.setWindowTitle("A L P E")
 
 setBackground() # Foto background
 shadow = loadShadows() # Carrega as conifgurações de sombreamento
 
 # Titulo do App
 loadFonts()
-titleText = QLabel("Peak Saver", janela)
+titleText = QLabel("A l p e", janela)
 titleConfigStyle(titleText)
 
 # Campo para inserir o Link do vídeo

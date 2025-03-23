@@ -27,7 +27,6 @@ def formato_saida(video, entrada, formato_saida):
         ys = yt.streams.get_highest_resolution()
         ys.download(output_path=caminho_destino)
 
-
 def arquivo_existe(nome_arquivo, extensao, caminho_destino):
     """Verifica se o arquivo já existe no diretório de destino"""
     nome_completo = nome_arquivo + "." + extensao

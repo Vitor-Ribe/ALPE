@@ -12,7 +12,7 @@ Um baixador de videos do Youtube
 
 ### Entradas
 Você pode escolher baixar apenas um vídeo, ou então baixar uma playlist completa.
-Ps: Lembrando que para baixar uma playlist ela tem que ser pública ou estar marcada como "Não listada". O app ainda não possui suporte para baixar playlists privadas.
+Ps: Lembrando que ao tentar baixar uma playlist ela tem que ser pública ou estar marcada como "Não listada". O app ainda não possui suporte para baixar playlists privadas.
 
 ### Saídas
 Atualmente é possível salvar os vídeos nos formatos Mp4 e M4a

@@ -18,11 +18,11 @@ Ps: Lembrando que ao tentar baixar uma playlist ela tem que ser pública ou esta
 Atualmente é possível salvar os vídeos nos formatos Mp4 e M4a
 
 ### Run
-Execute o arquivo front.py
+Execute o arquivo `front.py`
 
 ### Pasta de saída
-O app cria a pasta "FilesDownloader" na pasta Downloads de seus arquivos, onde ele distribui os downloads em duas subpastas: Mp3 para os arquivos de audio, e Mp4 para os arquivos de vídeo.
+O app cria a pasta "FilesDownloader" na pasta Downloads de seus arquivos, onde ele distribui os downloads em duas subpastas: Mp3 (para os arquivos de audio), e Mp4 (para os arquivos de vídeo).
 
 ### Tecnologias
-- Pytubefix
-- PyQt6
+- [Pytubefix](https://pytubefix.readthedocs.io/en/latest/)
+- [PyQt6](https://doc.qt.io/qtforpython-6/)

@@ -5,7 +5,7 @@ from PyQt6.QtCore import Qt
 import back
 
 def titleConfigStyle(title):
-    x = (janela.width() // 2) - (title.width() * 2)  # Centraliza o titulo na tela
+    x = (janela.width() // 2) - (title.width() + (title.width() // 2))  # Centraliza o titulo na tela
     title.move(x, 130)
     title.setStyleSheet("""
         QLabel {
@@ -149,7 +149,7 @@ shadow = loadShadows() # Carrega as conifgurações de sombreamento
 
 # Titulo do App
 loadFonts()
-titleText = QLabel("Baixa Youtube", janela)
+titleText = QLabel("Peak Saver", janela)
 titleConfigStyle(titleText)
 
 # Campo para inserir o Link do vídeo
@@ -177,7 +177,7 @@ outputText = QLabel("Como quer salvar?", janela)
 outputText.move(50, 370)
 fontConfigStyle(outputText)
 
-outputMp3Button = QPushButton("Mp3", janela)
+outputMp3Button = QPushButton("M4a", janela)
 outputMp3Button.setGeometry(50, 400, 100, 40)
 defaultConfigStyle(outputMp3Button)
 outputMp3Button.clicked.connect(lambda: actionButton('mp3'))

@@ -97,26 +97,32 @@ def loadShadows():
     shadow.setOffset(2, 2)  # Distância da sombra
     return shadow
 
+def updateButtonStyles(selected_button, buttons_group):
+    # Atualiza os estilos dos botões, destacando o selecionado e resetando os outros.
+    for button in buttons_group:
+        if button == selected_button:
+            clickedConfigStyle(button)
+        else:
+            defaultConfigStyle(button)
+
 def actionButton(tipe):
     global entrada, saida
-    if tipe == 'video':
-        clickedConfigStyle(inputVideoButton)
-        defaultConfigStyle(inputPlaylistButton)
+
+    inputButtons = [inputVideoButton, inputPlaylistButton]
+    outputButtons = [outputM4aButton, outputWavButton, outputMp3Button, outputMp4Button]
+
+    if tipe in ["video", "playlist"]:
+        updateButtonStyles(inputVideoButton if tipe == "video" else inputPlaylistButton, inputButtons)
         entrada = tipe
 
-    elif tipe == 'playlist':
-        clickedConfigStyle(inputPlaylistButton)
-        defaultConfigStyle(inputVideoButton)
-        entrada = tipe
-
-    elif tipe == 'mp3':
-        clickedConfigStyle(outputMp3Button)
-        defaultConfigStyle(outputMp4Button)
-        saida = tipe
-
-    elif tipe == 'mp4':
-        clickedConfigStyle(outputMp4Button)
-        defaultConfigStyle(outputMp3Button)
+    elif tipe in ["mp3", "mp4", "wav", "m4a"]:
+        button_mapping = {
+            "mp3": outputMp3Button,
+            "mp4": outputMp4Button,
+            "wav": outputWavButton,
+            "m4a": outputM4aButton
+        }
+        updateButtonStyles(button_mapping[tipe], outputButtons)
         saida = tipe
 
 def downloadVideo():
@@ -177,10 +183,20 @@ outputText = QLabel("Como quer salvar?", janela)
 outputText.move(50, 370)
 fontConfigStyle(outputText)
 
-outputMp3Button = QPushButton("M4a", janela)
+outputMp3Button = QPushButton("Mp3", janela)
 outputMp3Button.setGeometry(50, 400, 100, 40)
 defaultConfigStyle(outputMp3Button)
 outputMp3Button.clicked.connect(lambda: actionButton('mp3'))
+
+outputWavButton = QPushButton("Wav", janela)
+outputWavButton.setGeometry(50, 450, 100, 40)
+defaultConfigStyle(outputWavButton)
+outputWavButton.clicked.connect(lambda: actionButton('wav'))
+
+outputM4aButton = QPushButton("M4a", janela)
+outputM4aButton.setGeometry(155, 450, 100, 40)
+defaultConfigStyle(outputM4aButton)
+outputM4aButton.clicked.connect(lambda: actionButton('m4a'))
 
 outputMp4Button = QPushButton("Mp4", janela)
 outputMp4Button.setGeometry(155, 400, 100, 40)

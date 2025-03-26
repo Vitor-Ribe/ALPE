@@ -4,7 +4,7 @@ Um baixador de videos do Youtube
 
 <div align="center">
 
-![image](https://github.com/user-attachments/assets/fd796a39-c13b-4feb-95f4-1bb50f6e0a6c)
+![image](https://github.com/Vitor-Ribe/ALPE/blob/master/images/Captura%20de%20tela%20de%202025-03-26%2000-50-06.png)
 
 </div>
 

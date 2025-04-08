@@ -1,6 +1,6 @@
 # A L P E 🏔️
 
-Um baixador de videos do Youtube ![image](https://github.com/simple-icons/simple-icons/blob/develop/icons/youtube.svg)
+Um baixador de videos do Youtube
 
 <div align="center">
 
